@@ -36,6 +36,27 @@
 		embedded_svc.settings.loadingText = 'Caricamento'; //(Defaults to Loading)
 
 		//SETTINGS
+		
+		embedded_svc.settings.extraPrechatFormDetails = [
+		    {"label":"Profile IDEAL","value":"FR4NC0","transcriptFields":[],"displayToAgent":true}
+		]; 
+
+		embedded_svc.settings.extraPrechatInfo = [
+		    {
+			"entityName":"Account",
+			"showOnCreate":true,
+			"saveToTranscript":"Profile_IDEAL__c",
+			"entityFieldMaps":[
+			    {
+				"isExactMatch":true,
+				"fieldName":"Profile_IDEAL__c",
+				"doCreate":false,
+				"doFind":true,
+				"label":"Profile IDEAL"
+			    }
+			]
+		    }
+		]
 
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
